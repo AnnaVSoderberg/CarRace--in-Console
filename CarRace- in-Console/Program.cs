@@ -11,6 +11,8 @@
             Thread t2 = new Thread(() => car2.Race(car2));
             Thread t3 = new Thread(() => CurrentStatusRace.CurrentStatus()); 
 
+            t3.IsBackground = true;
+
             t1.Start();
             t2.Start();
             t3.Start();
